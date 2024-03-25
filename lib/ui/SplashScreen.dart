@@ -1,5 +1,6 @@
 
 
+import 'package:divide_now/utils/helper.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget{
@@ -8,11 +9,7 @@ class SplashScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-
+      theme: Helper.theme(),
       home:  Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,

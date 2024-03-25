@@ -1,4 +1,5 @@
 import 'package:divide_now/ui/SplashScreen.dart';
+import 'package:divide_now/utils/helper.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,10 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: Helper.theme(),
       home: const MyHomePage(title: 'Divide Now'),
     );
   }
@@ -42,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void nextButtonPress(){
     Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => SplashScreen()));
+        MaterialPageRoute(builder: (context) => const SplashScreen()));
   }
 
   @override
